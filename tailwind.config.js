@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'bg-grid': "url('/v882-kul-40.jpg')",
-      },
     },
   },
   plugins: [],
