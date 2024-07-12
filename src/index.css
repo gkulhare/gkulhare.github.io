@@ -70,3 +70,30 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-5px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(5px);
+  }
+}
+
+.animate-fade {
+  animation: fadeInDown 0.5s forwards, fadeOutUp 0.5s 0.5s forwards;
+  position: absolute;
+}
