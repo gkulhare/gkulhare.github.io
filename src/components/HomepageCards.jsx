@@ -3,6 +3,8 @@ import ReadMe from "./ReadME";
 import Quote from "./Quote";
 import Projects from "./Projects";
 import { projects } from "../data/projects";
+import Jobs from "./Jobs";
+import { jobs } from "../data/jobs";
 
 export default function HomepageCards(){
     return(
@@ -20,8 +22,8 @@ export default function HomepageCards(){
             <div className="col-span-1 row-span-2 bg-gray-900 p-4 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400">
                 Status
             </div>
-            <div className="col-span-1 row-span-4 bg-gray-900 p-4 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400">
-                Tech Stack
+            <div className="col-span-1 row-span-4 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+                <Jobs jobs={jobs}/>
             </div>
             <div className="col-span-1 row-span-4 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
 

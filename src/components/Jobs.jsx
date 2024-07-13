@@ -1,34 +1,16 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faCode, faC } from "@fortawesome/free-solid-svg-icons";
-import { faGolang, faPython, faRust, faDocker } from "@fortawesome/free-brands-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
-function getIcon(iconName){
-    switch(iconName){
-        case "faC":
-            return faC;
-        case "faPython":
-            return faPython;
-        case "faGolang":
-            return faGolang;
-        case "faRust":
-            return faRust;
-        case "faDocker":
-            return faDocker;
-        default:
-            return null;
-    }
-}
-
-export default function Projects({projects}) {
+export default function Jobs({jobs}) {
 
     const [index, setIndex] = useState(0);
     const [scroll, setScroll] = useState(true);
     const [animateState, setAnimateState] = useState(false);
 
     async function onPrev(){
-        setIndex(index==0 ? projects.length-1 : index-1);
+        setIndex(index==0 ? jobs.length-1 : index-1);
         setAnimateState(true);
 
         setTimeout(() => {
@@ -37,7 +19,7 @@ export default function Projects({projects}) {
     }
     
     async function onNext(){
-        setIndex((index+1)%projects.length);
+        setIndex((index+1)%jobs.length);
         setAnimateState(true);
 
         setTimeout(() => {
@@ -57,26 +39,28 @@ export default function Projects({projects}) {
         <div className="flex flex-col h-full w-full justify-between" onMouseEnter={() => {setScroll(false);}} onMouseLeave={() => {setScroll(true);}}>
             <div className="w-full text-center p-2 bg-gray-950">
                 <div className="text-base">
-                    <FontAwesomeIcon icon={faCode} className="text-green-400"/> Projects
+                    <FontAwesomeIcon icon={faBriefcase} className="text-green-400"/> Work Experience
                 </div>
             </div>
         
         <div className="group relative flex flex-col flex-grow w-full h-full justify-between px-4 py-2">           
             <div key={index} className={`transition-transform duration-500 ease-out ${animateState ? "translate-x-[-150%]" : "translate-x-0"}`}>
-                <div className="flex flex-row justify-between text-center">
-                <div className="text-indigo-400 text-lg pb-2 ">
-                    {projects[index].title}
+                <div className="flex flex-col justify-between text-center">
+                <div className="text-indigo-400 text-base">
+                    {jobs[index].title}
                 </div>
-                <div className="flex">
-                { projects[index].techIcons.map((icon) => (
-                    <div>
-                        <FontAwesomeIcon icon={getIcon(icon)} className="pt-1 px-2 fa-lg text-green-400" />
-                    </div>
-                ))}
+                <div className="">
+                    {jobs[index].company}
                 </div>
                 </div>
                 <div className="text-sm">
-                    {projects[index].desc}
+                    <ul className="list-disc p-4">
+                    { jobs[index].desc.map((point) => (
+                    <li>
+                        {point}
+                    </li>
+                ))}
+                    </ul>
                 </div>
             </div>
             <div></div>
