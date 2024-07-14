@@ -11,8 +11,8 @@ export function Sidebar() {
                 <img src="v882-kul-40.jpg" className="w-full"></img>
                 <div className="absolute inset-0 bg-gray-900 opacity-50"></div>
                 <div className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-2">
-                    <div className="h-24 w-24 rounded-full overflow-hidden">
-                        <img src="./IMG_8678.jpg" className=" grayscale h-full w-full rounded-full object-cover object-center transform scale-150 translate-y-[15%]"></img>
+                    <div className="h-28 w-28 rounded-full overflow-hidden">
+                        <img src="./src/assets/photos/pf.JPG" className=" grayscale h-full w-full rounded-full object-cover object-center transform scale-150 translate-y-[15%]"></img>
                     </div>
                     {/* <span className="text-white bg-gradient-to-r from-black to-black-opacity-25 px-2 py-1 rounded-full inline-block whitespace-nowrap">Gaurav Kulhare</span> */}
                 </div>

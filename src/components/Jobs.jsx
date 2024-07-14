@@ -43,33 +43,12 @@ export default function Jobs({jobs}) {
                 </div>
             </div>
         
-        <div className="group relative flex flex-col flex-grow w-full h-full justify-between px-4 py-2">           
-            <div key={index} className={`transition-transform duration-500 ease-out ${animateState ? "translate-x-[-150%]" : "translate-x-0"}`}>
-                <div className="flex flex-col justify-between text-center">
-                <div className="text-indigo-400 text-base">
-                    {jobs[index].title}
+        <div className="group relative flex flex-col flex-grow w-full h-1 justify-between">           
+            {jobs.map((job)=> (
+                <div className="flex justify-center h-1/3 items-center overflow-hidden group-hover:opacity-30 group-hover:hover:opacity-100">
+                    <img src={job.src} className={`${job.display}`}></img>
                 </div>
-                <div className="">
-                    {jobs[index].company}
-                </div>
-                </div>
-                <div className="text-sm">
-                    <ul className="list-disc p-4">
-                    { jobs[index].desc.map((point) => (
-                    <li>
-                        {point}
-                    </li>
-                ))}
-                    </ul>
-                </div>
-            </div>
-            <div></div>
-            <button className="carousel-button left-0 group-hover:bg-gradient-to-r" onClick={onPrev}>
-                <FontAwesomeIcon icon={faAngleLeft}/>
-            </button>
-            <button className="carousel-button right-0 group-hover:bg-gradient-to-l" onClick={onNext}>
-                <FontAwesomeIcon icon={faAngleRight}/>
-            </button>
+            ))}
         </div>
         </div>
     );
