@@ -28,7 +28,7 @@ export default function CurrentRead({papers}){
     }
 
     useEffect(()=> {
-        const interval = setInterval(scroll && onNext, 5000);
+        const interval = setInterval(scroll && onNext, 4500);
 
         return () => {
             clearInterval(interval);
