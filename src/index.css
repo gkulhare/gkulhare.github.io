@@ -122,3 +122,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   group-hover:hover:text-indigo-400
   absolute top-1/2 transform -translate-y-1/2;
 }
+
+.carousel-button-sm{
+  @apply focus:outline-none
+  opacity-0 group-hover:opacity-50 group-hover:hover:opacity-100
+  bg-transparent group-hover:from-green-400/10 group-hover:to-transparent group-hover:hover:from-green-400/30 group-hover:hover:to-transparent 
+  group-hover:border-none 
+  group-hover:bg-opacity-5 group-hover:hover:bg-opacity-30
+  group-hover:hover:text-indigo-400
+  absolute top-1/2 transform -translate-y-1/2
+  rounded-sm;
+}

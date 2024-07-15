@@ -46,7 +46,7 @@ export default function Jobs({jobs}) {
         <div className="group relative flex flex-col flex-grow w-full h-1 justify-between">           
             {jobs.map((job)=> (
                 <div className="flex justify-center h-1/3 items-center overflow-hidden group-hover:opacity-30 group-hover:hover:opacity-100">
-                    <img src={job.src} className={`${job.display}`}></img>
+                        <img src={job.src} className={`${job.display}`}></img>
                 </div>
             ))}
         </div>

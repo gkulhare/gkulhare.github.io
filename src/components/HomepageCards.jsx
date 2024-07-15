@@ -3,8 +3,11 @@ import ReadMe from "./ReadME";
 import Quote from "./Quote";
 import Projects from "./Projects";
 import { projects } from "../data/projects";
-import Jobs from "./Jobs";
 import { jobs } from "../data/jobs";
+import { papers } from "../data/papers";
+import Jobs from "./Jobs";
+import Status from "./Status";
+import CurrentRead from "./CurrentRead";
 
 export default function HomepageCards(){
     return(
@@ -14,13 +17,13 @@ export default function HomepageCards(){
                 <IntroCard/>
 
             </div>
-            <div className="col-span-1 row-span-6 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 p-4">
+            <div className="col-span-1 row-span-6 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 p-4 overflow-y-auto">
 
                 <ReadMe/>
 
             </div>
-            <div className="col-span-1 row-span-2 bg-gray-900 p-4 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400">
-                Status
+            <div className="col-span-1 row-span-2 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+                <Status/>
             </div>
             <div className="col-span-1 row-span-4 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
                 <Jobs jobs={jobs}/>
@@ -30,8 +33,8 @@ export default function HomepageCards(){
                 <Projects projects={projects}/>
 
             </div>
-            <div className="col-span-1 row-span-2 bg-gray-900 p-4 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400">
-                Current Read
+            <div className="col-span-1 row-span-2 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+                <CurrentRead papers={papers}/>
             </div>
             <div className="col-span-1 row-span-2 bg-gray-900 p-4 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400">
                 
