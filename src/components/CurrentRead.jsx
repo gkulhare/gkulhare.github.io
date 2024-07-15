@@ -36,8 +36,12 @@ export default function CurrentRead({papers}){
     }, [index, scroll, animateState]);
 
     return(
-        <div className="relative flex flex-col h-full w-full justify-between" onMouseEnter={() => {setScroll(false);}} onMouseLeave={() => {setScroll(true);}}>
-        
+        <div className="flex flex-col h-full w-full justify-between" onMouseEnter={() => {setScroll(false);}} onMouseLeave={() => {setScroll(true);}}>     
+            <div className="w-full text-center p-2 bg-gray-950">
+                <div className="text-base">
+                    <FontAwesomeIcon icon={faBookOpen} className="text-green-400"/> Current Reads
+                </div>
+            </div>
         <div className="group relative flex flex-col flex-grow w-full h-full justify-between px-4 py-2">           
             <div key={index} className={`transition-transform duration-500 ease-out ${animateState ? "translate-x-[-150%]" : "translate-x-0"}`}>
                 <div className="flex flex-row justify-between">
@@ -59,11 +63,6 @@ export default function CurrentRead({papers}){
                 <FontAwesomeIcon icon={faAngleRight}/>
             </button>
         </div>
-            <div className="absolute bottom-0 w-full text-center p-2 bg-gray-950">
-                <div className="text-base">
-                    <FontAwesomeIcon icon={faBookOpen} className="text-green-400"/> Current Reads
-                </div>
-            </div>
         </div>
     );
     
