@@ -11,7 +11,7 @@ export const jobs = [
         title: "Machine Learning Research Assistant",
         company: "Clairvoyant Bizinfo",
         desc: ["ad fkajsdgklasjdgkl","asdfghsdfh","gsfdhsfdhdshdfgh"],
-        display:"scale-50 -translate-y-2",
+        display:"scale-[60%] -translate-y-2",
     },
     {
         src:"./src/assets/photos/SUNYRF-LOGO-HR-TRANSP-4C__ResizedImageWzQxNSwxODBd.png",

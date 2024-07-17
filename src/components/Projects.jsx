@@ -87,6 +87,7 @@ export default function Projects({projects}) {
                 <FontAwesomeIcon icon={faAngleRight}/>
             </button>
         </div>
+        <div className="w-full text-xs text-center bg-slate-600">HOVER TO ENABLE MANUAL SCROLLING</div>
         </div>
     );
 }

@@ -50,6 +50,7 @@ export default function Jobs({jobs}) {
                 </div>
             ))}
         </div>
+        <div className="w-full text-xs text-center bg-slate-600">CLICK ON INSTITUTE TO LEARN MORE</div>
         </div>
     );
 }

@@ -115,8 +115,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .carousel-button{
   @apply h-full focus:outline-none
-  opacity-0 group-hover:opacity-50 group-hover:hover:opacity-100
-  bg-transparent group-hover:from-green-400/10 group-hover:to-transparent group-hover:hover:from-green-400/30 group-hover:hover:to-transparent 
+  opacity-0 group-hover:opacity-70 group-hover:hover:opacity-100
+  bg-transparent group-hover:from-green-400/20 group-hover:to-transparent group-hover:hover:from-green-400/30 group-hover:hover:to-transparent 
   group-hover:border-none 
   group-hover:bg-opacity-5 group-hover:hover:bg-opacity-30
   group-hover:hover:text-indigo-400
@@ -132,4 +132,57 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   group-hover:hover:text-indigo-400
   absolute top-1/2 transform -translate-y-1/2
   rounded-sm;
+}
+
+.d-flex {
+  overflow: visible;
+  animation: animateContainer 5s linear forwards infinite;
+}
+
+.d-flex-rev {
+  overflow: visible;
+  animation: animateContainerRev 5s linear forwards infinite;
+}
+
+@keyframes animateContainer1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-250%);
+  }
+}
+
+@keyframes animateContainer2 {
+  from {
+    transform: translateY(-240%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes animateContainer3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-285%);
+  }
+}
+
+@keyframes animateContainer4 {
+  from {
+    transform: translateY(-245%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes animateContainer5 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-277%);
+  }
 }
