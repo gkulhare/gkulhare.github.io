@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import background from "../assets/photos/terminal_screen.jpg"
+import background from "/assets/photos/terminal_screen.jpg"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -177,12 +177,12 @@ export default function Contact(){
   animation: "animateContainer1 5s linear forwards infinite"}}>
                         {tech.slice(4,8).map((icon)=>(
                             <div className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                         {tech.slice(4,8).map((icon)=>(
                             <div className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                     </div>
@@ -190,12 +190,12 @@ export default function Contact(){
   animation: "animateContainer2 5s linear forwards infinite"}}>
                         {tech.slice(0,4).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                         {tech.slice(0,4).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                     </div>
@@ -208,7 +208,7 @@ export default function Contact(){
                         ))}
                         {tech.slice(8,12).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                     </div>
@@ -216,12 +216,12 @@ export default function Contact(){
   animation: "animateContainer4 5s linear forwards infinite"}}>
                         {tech.slice(12,16).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                         {tech.slice(12,16).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                     </div>
@@ -229,12 +229,12 @@ export default function Contact(){
   animation: "animateContainer5 5s linear forwards infinite"}}>
                         {tech.slice(16).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                         {tech.slice(16).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                     </div>
