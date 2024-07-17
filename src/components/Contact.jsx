@@ -203,7 +203,7 @@ export default function Contact(){
   animation: "animateContainer3 5s linear forwards infinite"}}>
                         {tech.slice(8,12).map((icon)=>(
                             <div  className="snap-center flex-shrink-0 w-full">
-                                <img src={`./src/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
+                                <img src={`/assets/photos/${icon.src}.png`} className={`w-24 ${icon.att}`}></img>
                             </div>
                         ))}
                         {tech.slice(8,12).map((icon)=>(

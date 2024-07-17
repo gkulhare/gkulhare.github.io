@@ -32,7 +32,7 @@ export default function HomepageCards(){
             <div className="col-span-1 row-span-4 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
                 <Status/>
             </div>
-            <div className="col-span-1 row-span-2 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 ">
+            <div className="col-span-1 row-span-2 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
                 
                 <Terminal/>
             </div>
