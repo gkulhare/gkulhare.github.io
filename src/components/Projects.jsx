@@ -45,6 +45,14 @@ export default function Projects({projects}) {
         },100)
     }
 
+    async function onPrevNoAnimate(){
+        setIndex(index==0 ? projects.length-1 : index-1);
+    }
+    
+    async function onNextNoAnimate(){
+        setIndex((index+1)%projects.length);
+    }
+
     useEffect(()=> {
         const interval = setInterval(scroll && onNext, 5000);
 
@@ -62,7 +70,7 @@ export default function Projects({projects}) {
             </div>
         
         <div className="group relative flex flex-col flex-grow w-full h-full justify-between px-4 py-2">           
-            <div key={index} className={`transition-transform duration-500 ease-out ${animateState ? "translate-x-[-150%]" : "translate-x-0"}`}>
+            <div key={index} className={`transition-transform duration-[1200ms] ease-out ${animateState ? "translate-x-[-150%]" : "translate-x-0"}`}>
                 <div className="flex flex-row justify-between text-center">
                 <div className="text-indigo-400 text-lg pb-2 ">
                     {projects[index].title}
@@ -80,10 +88,10 @@ export default function Projects({projects}) {
                 </div>
             </div>
             <div></div>
-            <button className="carousel-button left-0 group-hover:bg-gradient-to-r" onClick={onPrev}>
+            <button className="carousel-button left-0 group-hover:bg-gradient-to-r" onClick={onPrevNoAnimate}>
                 <FontAwesomeIcon icon={faAngleLeft}/>
             </button>
-            <button className="carousel-button right-0 group-hover:bg-gradient-to-l" onClick={onNext}>
+            <button className="carousel-button right-0 group-hover:bg-gradient-to-l" onClick={onNextNoAnimate}>
                 <FontAwesomeIcon icon={faAngleRight}/>
             </button>
         </div>

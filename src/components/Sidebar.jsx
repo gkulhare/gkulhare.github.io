@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { faBlog, faFileArrowDown, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import resume from "../assets/files/Gaurav_Kulhare_Resume.pdf"
 
 export function Sidebar() {
 
@@ -21,26 +24,17 @@ export function Sidebar() {
 
                     {/* Home side-bar */}
                     <li className="flex w-full pb-2 border-b border-gray-500 border-opacity-40">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-2 ml-2 size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                    <a href="#" className="hover:text-indigo-400 text-green-400 px-2 py-2 w-full justify-self-start">Home</a>
+                    <a href="#" className="hover:text-indigo-400 text-green-400 px-2 py-2 rounded-md justify-self-start"><FontAwesomeIcon icon={faHouseChimney} className="w-5 text-lg text-white pr-2"/>Home</a>
                     </li>
 
                     {/* Resume side-bar */}
                     <li className="flex w-full pb-2 border-b border-gray-500 border-opacity-40">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mt-2 ml-2 size-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                    </svg>
-                    <a href="#" className=" hover:text-indigo-400 text-green-400 px-2 py-2 rounded-md justify-self-start">Resume</a>
+                    <a href="../assets/files/Gaurav_Kulhare_Resume.pdf" download="Gaurav_Kulhare_Resume.pdf" className="hover:text-indigo-400 text-green-400 px-2 py-2 rounded-md justify-self-start"> <FontAwesomeIcon icon={faFileArrowDown} className="w-5 text-lg text-white -translate-x-0.5 pr-1.5"/>Resume</a>
                     </li>
 
                     {/* Blog side-bar */}
                     <li className="flex w-full pb-2 border-b border-gray-500 border-opacity-40">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-2 ml-2 size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-                    <a href="#" className="hover:text-indigo-400 text-green-400 px-2 py-2 rounded-md justify-self-start">Blog</a>
+                    <a href="#" className="hover:text-indigo-400 text-green-400 px-2 py-2 rounded-md justify-self-start"><FontAwesomeIcon icon={faBlog} className="h-5 text-lg text-white pr-2"/>Blog</a>
                     </li>
                 </ul>
             </div>

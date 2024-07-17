@@ -3,6 +3,7 @@ import background from "../assets/photos/terminal_screen.jpg"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 const jobs = ["Scaling microservices", "Borrowing in Rust", "Composing Riffs", "Balancing Server Load", "Multi-threading in Go", "Reading Dostoevsky", "Deploying Docker Containers", "Scripting in Python", "Awaiting Silk Song", ];
 const tech  = [
@@ -90,6 +91,7 @@ const tech  = [
 
 export default function Contact(){
 
+    const [active, setActive] = useState("none");
     const [typingIndex, setTypingIndex] = useState(0);
     const [index, setIndex] = useState(1);
     const [scroll, setScroll] = useState({
@@ -167,7 +169,6 @@ export default function Contact(){
 
     return (
         <div className="relative h-full w-full">
-            <div className="absolute top-0 left-0 text-lg px-4 py-2 text-white"><span className="text-indigo-400">Machines </span>don't speak your language? <span className="text-green-400">I got you.</span></div>
             {/* <div className="h-full w-full bg-cover bg-center absolute inset-0 bg-black opacity-50"></div> */}
             <div className="flex flex-col justify-between w-full h-full items-center">
                 <div className="relative flex flex-row justify-center space-x-6 full w-full overflow-hidden bg-gray-800 opacity-20">
@@ -239,16 +240,43 @@ export default function Contact(){
                     </div>
                 </div>
             </div>
+            <div className="absolute top-0 left-0 text-lg px-4 py-2 text-white"><span className="text-indigo-400">Machines </span>don't speak your language? <span className="text-green-400">I got you.</span></div>
             <div class="absolute right-0 bottom-0 flex space-x-4 px-4 py-2">
-                <a href="https://linkedin.com/in/yourprofile" class="text-white hover:text-indigo-500">
+            <div className="group relative">
+                <a onMouseEnter={()=>{setActive("github");}} onMouseLeave={()=>{ setActive("none");}} href="https://github.com/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
                     <FontAwesomeIcon icon={faSquareGithub} className="fa-2x"/>
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" class="text-white hover:text-indigo-500">
+                </a> 
+                {active=="github" && 
+                (<span onMouseEnter={()=>{setActive("github")}} onMouseLeave={()=>{setActive("none")}} className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[80%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
+                <span  className="text-nowrap text-xs rounded-md">
+                <FontAwesomeIcon icon={faCopy} className="pr-2"/>copy {active} github
+                </span>
+            </span>)}
+            </div> 
+                {/* <span className="text-xs">github.com/gkulhare</span> */}
+            <div className="group relative">
+                <a onMouseEnter={()=>{setActive("linkedin");}} onMouseLeave={()=>{ setActive("none");}} href="https://linkedin.com/in/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
                     <FontAwesomeIcon icon={faLinkedin} className="fa-2x"/>
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" class="text-white hover:text-indigo-500">
-                    <FontAwesomeIcon icon={faEnvelope} className="fa-2x"/>
-                </a>
+                </a> 
+                {active=="linkedin" && 
+                (<span onMouseEnter={()=>{setActive("linkedin")}} onMouseLeave={()=>{setActive("none")}} className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[80%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
+                <span  className="text-nowrap text-xs rounded-md">
+                <FontAwesomeIcon icon={faCopy} className="pr-2"/>copy {active} link
+                </span>
+            </span>)}
+            </div>
+                {/* <span className="text-xs">linkedin.com/in/gkulhare</span> */}
+            <div className="group relative">
+                <a onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{setActive("none");}} href="mailto:gkulhare@cs.stonybrook.edu" class="text-white hover:text-indigo-500">
+                    <FontAwesomeIcon icon={faEnvelope} className="fa-2x"/> 
+                </a> 
+                {active=="mail" && 
+                (<span onMouseEnter={()=>{setActive("mail")}} onMouseLeave={()=>{setActive("none")}} className="absolute px-2 py-1 top-0 right-0 translate-x-[40%] -translate-y-[80%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
+                <span  className="text-nowrap text-xs rounded-md">
+                <FontAwesomeIcon icon={faCopy} className="pr-2"/>copy {active} link
+                </span>
+            </span>)}
+            </div>
             </div>
             </div>
     );
