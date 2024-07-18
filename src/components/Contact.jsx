@@ -177,10 +177,10 @@ export default function Contact(){
     } 
 
     return (
-        <div className="relative h-full w-full">
+        <div className="relative h-full w-full overflow-hidden">
             {/* <div className="h-full w-full bg-cover bg-center absolute inset-0 bg-black opacity-50"></div> */}
             <div className="flex flex-col justify-between w-full h-full items-center">
-                <div className="relative flex flex-row justify-center space-x-6 full w-full overflow-hidden bg-gray-800 opacity-20">
+                <div className="relative flex flex-row justify-center space-x-6 full w-full overflow-hidden bg-gray-800 opacity-25">
                     <div className="h-full w-full bg-cover bg-center absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-60"></div>
                     <div className={`flex flex-col justify-between w-24 space-y-2`} style={{ animationPlayState: "running", overflow: "visible",
   animation: "animateContainer1 5s linear forwards infinite"}}>
@@ -249,8 +249,9 @@ export default function Contact(){
                     </div>
                 </div>
             </div>
+            <div className="absolute top-0 left-0 inset-0 object-cover rounded-xl bg-gradient-to-t from-black via-transparent to-black opacity-50 overflow-hidden"></div>
             <div className="absolute top-0 left-0 text-lg px-4 py-2 text-white"><span className="text-indigo-400">Machines </span>don't speak your language? <span className="text-green-400">I got you.</span></div>
-            <div class="absolute right-0 bottom-0 flex space-x-4 px-4 py-2">
+            <div class="absolute right-0 bottom-0 flex justify-between w-full space-x-4 px-4 py-2">
             <div className="group relative flex items-end">
                 <a href="https://github.com/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-slate-700">
                     <FontAwesomeIcon icon={faSquareGithub} className="fa-2x"/>
