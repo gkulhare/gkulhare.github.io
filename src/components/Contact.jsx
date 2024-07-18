@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import React from "react";
 import background from "/assets/photos/terminal_screen.jpg"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faClipboard } from "@fortawesome/free-solid-svg-icons";
 
 const jobs = ["Scaling microservices", "Borrowing in Rust", "Composing Riffs", "Balancing Server Load", "Multi-threading in Go", "Reading Dostoevsky", "Deploying Docker Containers", "Scripting in Python", "Awaiting Silk Song", ];
 const tech  = [
@@ -101,6 +102,14 @@ export default function Contact(){
         s4: 3,
         s5: 0,
     });
+
+    function copyToClipboard(text){
+        navigator.clipboard.writeText(text).then(() => {
+          setActive(`${active}Copied`);
+        }).catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+      };
 
     useEffect(()=>{
         async function onNext(){
@@ -242,38 +251,49 @@ export default function Contact(){
             </div>
             <div className="absolute top-0 left-0 text-lg px-4 py-2 text-white"><span className="text-indigo-400">Machines </span>don't speak your language? <span className="text-green-400">I got you.</span></div>
             <div class="absolute right-0 bottom-0 flex space-x-4 px-4 py-2">
-            <div className="group relative">
-                <a onMouseEnter={()=>{setActive("github");}} onMouseLeave={()=>{ setActive("none");}} href="https://github.com/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
+            <div className="group relative flex items-end">
+                <a href="https://github.com/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-slate-700">
                     <FontAwesomeIcon icon={faSquareGithub} className="fa-2x"/>
                 </a> 
-                {active=="github" && 
-                (<span onMouseEnter={()=>{setActive("github")}} onMouseLeave={()=>{setActive("none")}} className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[80%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
+                <span onMouseEnter={()=>{setActive("github");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("https://github.com/gkulhare")}} className="text-xs pl-2 hover:text-green-400 cursor-pointer">
+                    github.com/gkulhare
+                </span>
+                {(active=="github" || active=="githubCopied") && 
+                (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
                 <span  className="text-nowrap text-xs rounded-md">
-                <FontAwesomeIcon icon={faCopy} className="pr-2"/>copy {active} github
+                <FontAwesomeIcon icon={active=="github" ? faCopy : faClipboard} className="pr-2"/>{active=="github" ? "Copy" : "Copied"}
                 </span>
             </span>)}
             </div> 
                 {/* <span className="text-xs">github.com/gkulhare</span> */}
-            <div className="group relative">
-                <a onMouseEnter={()=>{setActive("linkedin");}} onMouseLeave={()=>{ setActive("none");}} href="https://linkedin.com/in/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
+            <div className="group relative flex items-end">
+                <a href="https://linkedin.com/in/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
                     <FontAwesomeIcon icon={faLinkedin} className="fa-2x"/>
                 </a> 
-                {active=="linkedin" && 
-                (<span onMouseEnter={()=>{setActive("linkedin")}} onMouseLeave={()=>{setActive("none")}} className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[80%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
+                <span onMouseEnter={()=>{setActive("linkedin");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("https://linkedin.com/in/gkulhare")}} className="text-xs pl-2 hover:text-green-400 cursor-pointer">
+                    linkedin.com/gkulhare
+                </span>
+                {(active=="linkedin" || active=="linkedinCopied") && 
+                (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
                 <span  className="text-nowrap text-xs rounded-md">
-                <FontAwesomeIcon icon={faCopy} className="pr-2"/>copy {active} link
+                <FontAwesomeIcon icon={active=="linkedin" ? faCopy : faClipboard} className="pr-2"/>{active=="linkedin" ? "Copy" : "Copied"}
                 </span>
             </span>)}
             </div>
                 {/* <span className="text-xs">linkedin.com/in/gkulhare</span> */}
-            <div className="group relative">
-                <a onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{setActive("none");}} href="mailto:gkulhare@cs.stonybrook.edu" class="text-white hover:text-indigo-500">
+            <div className="group relative flex items-end">
+                <a href="mailto:gkulhare@cs.stonybrook.edu" class="text-white hover:text-red-400">
                     <FontAwesomeIcon icon={faEnvelope} className="fa-2x"/> 
                 </a> 
-                {active=="mail" && 
-                (<span onMouseEnter={()=>{setActive("mail")}} onMouseLeave={()=>{setActive("none")}} className="absolute px-2 py-1 top-0 right-0 translate-x-[40%] -translate-y-[80%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
-                <span  className="text-nowrap text-xs rounded-md">
-                <FontAwesomeIcon icon={faCopy} className="pr-2"/>copy {active} link
+                <span onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("gkulhare@cs.stonybrook.edu")}} className="hover:text-green-400 cursor-pointer translate-y-0.5">
+                    <span className="pl-2 text-xs">
+                        gkulhare@cs.stonybrook.edu
+                    </span>
+                </span>
+                {(active=="mail" || active=="mailCopied") && 
+                (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
+                <span  className="text-nowrap text-xs rounded-md" onClick>
+                <FontAwesomeIcon icon={active=="mail" ? faCopy : faClipboard} className="pr-2"/>{active=="mail" ? "Copy" : "Copied"}
                 </span>
             </span>)}
             </div>
