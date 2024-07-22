@@ -12,31 +12,31 @@ import Contact from "./Contact";
 
 export default function HomepageCards(){
     return(
-        <div className="container mx-auto p-3 auto-rows-fr w-full grid grid-cols-4 rounded-lg gap-4 font-mono">
-            <div className="col-span-1 row-span-6 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 p-4 overflow-y-auto">
+        <div className="container mx-auto p-3 lg:auto-rows-fr w-full grid lg:grid-cols-4 grid-cols-1 rounded-lg gap-4 font-mono">
+            <div className="col-span-1 lg:row-span-6 row-span-2 bg-gray-900 rounded-xl shadow-lg  p-4 overflow-y-auto">
                 <ReadMe/>
             </div>
-            <div className="col-span-1 row-span-6 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+            <div className="col-span-1 lg:row-span-6 row-span-2 bg-gray-900 rounded-xl shadow-lg  overflow-hidden">
                 <Jobs jobs={jobs}/>
             </div>
-            <div className="col-span-1 row-span-6 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+            <div className="col-span-1 lg:row-span-6 row-span-2 bg-gray-900 rounded-xl shadow-lg  overflow-hidden">
 
                 <Projects projects={projects}/>
 
             </div>
-            <div className="col-span-1 row-span-4 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+            <div className="col-span-1 lg:row-span-4 row-span-1 bg-gray-900 rounded-xl shadow-lg  overflow-hidden">
 
                 <CurrentRead papers={papers}/>
 
             </div>
-            <div className="col-span-1 row-span-4 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+            <div className="col-span-1 lg:row-span-4 row-span-1 bg-gray-900 rounded-xl shadow-lg  overflow-hidden">
                 <Status/>
             </div>
-            <div className="col-span-1 row-span-2 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400 overflow-hidden">
+            <div className="col-span-1 lg:row-span-2 row-span-1 bg-gray-900 rounded-xl shadow-lg  overflow-hidden min-h-32">
                 
                 <Terminal/>
             </div>
-            <div className="col-span-2 row-span-2 bg-gray-900 rounded-xl shadow-lg border-2 border-transparent hover:border-green-400">
+            <div className="lg:col-span-2 col-span-1 lg:row-span-2 row-span-1 bg-gray-900 rounded-xl shadow-lg ">
 
                 <Contact/>
 

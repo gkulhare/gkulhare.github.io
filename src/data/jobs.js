@@ -14,7 +14,7 @@ export const jobs = [
         desc: ["Designed and implemented scalable ETL pipelines using Apache Airflow on AWS EC2 to collect and transform large datasets from diverse web sources via web scraping scripts and APIs",
             "Leveraged machine learning expertise to identify the most effective methodologies for sarcasm detection within text data, achieving a top accuracy of 74.49",
             "Contributed to research on word-embedding generation and training methodologies for supervised and semi-supervised learning models, enhancing their effectiveness"],
-        display:"scale-[60%] -translate-y-2",
+        display:"scale-[60%] -translate-y-4",
     },
     {
         src:"/assets/photos/SUNYRF-LOGO-HR-TRANSP-4C__ResizedImageWzQxNSwxODBd.png",
@@ -25,6 +25,6 @@ export const jobs = [
             "Developed a Shamir’s Secret Sharing Rust Module that includes Galois Field matrix inversion library for polynomial interpolation for Big Integers in cryptography, Proactive shares refreshing algorithm and Pedersen commitments on a permissioned blockchain for byzantine networks",
             "Conducting Research on approaches to develop information-theoretic secure encryption methodologies and block-chain based key management schemes",
             "Actively working on designing and implementing a secure, scalable secret sharing scheme using containerized applications deployed on a Kubernetes cluster. Utilized Docker for containerization and Kubernetes for orchestration, ensuring high availability and efficient data transmission for message reconstruction"],
-        display:"scale-50",
+        display:"scale-50 -translate-y-2",
     }
 ];

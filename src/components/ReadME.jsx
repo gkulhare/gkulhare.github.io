@@ -9,7 +9,7 @@ export default function ReadMe(){
         <p className="text-sm text-pretty">
             I'm Gaurav Kulhare, a software engineer and CS grad student at SUNY Stony Brook University, residing on Long Island, NY.
             <p className="mt-4">
-            I work in the <a href="https://www.fsl.cs.sunysb.edu/" className="text-green-400 hover:text-indigo-400">File Systems and Storage Lab</a> under Prof. Erez Zadok where I am developing a containerized distributed service for proactive and verifiable secret sharing in Rust at the moment.  
+            I work in the <a href="https://www.fsl.cs.sunysb.edu/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-indigo-400">File Systems and Storage Lab</a> under Prof. Erez Zadok where I am developing a containerized distributed service for proactive and verifiable secret sharing in Rust at the moment.  
             </p>
             <p className="text-sm mt-4">
                 My areas of interest include back-end development, systems programming and clean front-end designs. 

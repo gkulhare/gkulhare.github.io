@@ -38,7 +38,7 @@ export default function Jobs({jobs}) {
     }, [index, scroll, animateState]);
 
     return(
-        <div className="relative flex flex-col h-full w-full justify-between overflow-hidden" onMouseEnter={() => {setScroll(false);}} onMouseLeave={() => {setScroll(true);}}>
+        <div className="relative flex flex-col h-full w-full justify-between overflow-hidden min-h-96" onMouseEnter={() => {setScroll(false);}} onMouseLeave={() => {setScroll(true);}}>
             <div className="w-full text-center p-2 bg-gray-950">
                 <div className="text-base">
                     <FontAwesomeIcon icon={faBriefcase} className="text-green-400"/> Work Experience

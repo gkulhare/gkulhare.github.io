@@ -88,10 +88,10 @@ export default function Projects({projects}) {
                 </div>
             </div>
             <div></div>
-            <button className="carousel-button left-0 group-hover:bg-gradient-to-r" onClick={onPrevNoAnimate}>
+            <button className="carousel-button-sm left-0 group-hover:bg-gradient-to-r" onClick={onPrevNoAnimate}>
                 <FontAwesomeIcon icon={faAngleLeft}/>
             </button>
-            <button className="carousel-button right-0 group-hover:bg-gradient-to-l" onClick={onNextNoAnimate}>
+            <button className="carousel-button-sm right-0 group-hover:bg-gradient-to-l" onClick={onNextNoAnimate}>
                 <FontAwesomeIcon icon={faAngleRight}/>
             </button>
         </div>
