@@ -12,8 +12,8 @@ import Contact from "./Contact";
 
 export default function HomepageCards(){
     return(
-        <div className="container mx-auto p-3 lg:auto-rows-fr w-full grid lg:grid-cols-4 grid-cols-1 rounded-lg gap-4 font-mono">
-            <div className="col-span-1 lg:row-span-6 row-span-2 bg-gray-900 rounded-xl shadow-lg  p-4 overflow-y-auto">
+        <div className="container mx-auto p-3 grid-rows-16 lg:auto-rows-fr w-full grid lg:grid-cols-4 grid-cols-1 rounded-lg gap-4 font-mono">
+            <div className="col-span-1 lg:row-span-6 row-span-2 bg-gray-900 rounded-xl shadow-lg  p-4 overflow-hidden">
                 <ReadMe/>
             </div>
             <div className="col-span-1 lg:row-span-6 row-span-2 bg-gray-900 rounded-xl shadow-lg  overflow-hidden">
@@ -36,7 +36,7 @@ export default function HomepageCards(){
                 
                 <Terminal/>
             </div>
-            <div className="lg:col-span-2 col-span-1 lg:row-span-2 row-span-1 bg-gray-900 rounded-xl shadow-lg ">
+            <div className="lg:col-span-2 col-span-1 lg:row-span-2 row-span-1 bg-gray-900 rounded-xl shadow-lg">
 
                 <Contact/>
 

@@ -16,7 +16,7 @@ export const projects = [
     },
     {
         title: "Synprobe",
-        desc: "This is a software that performs port scanning similar to nmap and provides additional info about the type of service running on specified ports if open.",
+        desc: "This is a software that performs port scanning similar to nmap and provides additional info about the type of service running on specified ports if open. Able to scan most generic ports or range of custom ports, differentiate between server initiated or client initiated TCP/TLS handshake and HTTP/HTTPS server",
         techIcons: ["faGolang"],
     },
 ]

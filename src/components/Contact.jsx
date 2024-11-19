@@ -177,7 +177,7 @@ export default function Contact(){
     } 
 
     return (
-        <div className="relative h-full w-full overflow-hidden">
+        <div className="relative h-64 md:h-full md:w-full overflow-hidden">
             {/* <div className="h-full w-full bg-cover bg-center absolute inset-0 bg-black opacity-50"></div> */}
             <div className="flex flex-col justify-between w-full h-full items-center">
                 <div className="relative flex flex-row justify-center space-x-6 full w-full overflow-hidden bg-gray-800 opacity-30">
@@ -268,10 +268,10 @@ export default function Contact(){
             </div> 
                 {/* <span className="text-xs">github.com/gkulhare</span> */}
             <div className="group relative flex items-end">
-                <a href="https://linkedin.com/in/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
-                    <FontAwesomeIcon icon={faLinkedin} className="fa-2x"/>
+                <a href="https://www.linkedin.com/in/gkulhare" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-500">
+                    <FontAwesomeIcon icon={faLinkedin} className="fa-2x -ml-4 md:ml-0"/>
                 </a> 
-                <span onMouseEnter={()=>{setActive("linkedin");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("https://linkedin.com/in/gkulhare")}} className="text-xs pl-2 hover:text-green-400 cursor-pointer">
+                <span onMouseEnter={()=>{setActive("linkedin");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("https://www.linkedin.com/in/gkulhare")}} className="text-xs pl-2 hover:text-green-400 cursor-pointer">
                     linkedin.com/gkulhare
                 </span>
                 {(active=="linkedin" || active=="linkedinCopied") && 
@@ -284,7 +284,7 @@ export default function Contact(){
                 {/* <span className="text-xs">linkedin.com/in/gkulhare</span> */}
             <div className="group relative flex items-end">
                 <a href="mailto:gkulhare@cs.stonybrook.edu" class="text-white hover:text-red-400">
-                    <FontAwesomeIcon icon={faEnvelope} className="fa-2x"/> 
+                    <FontAwesomeIcon icon={faEnvelope} className="fa-2x -ml-4 md:ml-0"/> 
                 </a> 
                 <span onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("gkulhare@cs.stonybrook.edu")}} className="hover:text-green-400 cursor-pointer translate-y-0.5">
                     <span className="pl-2 text-xs">
