@@ -287,9 +287,7 @@ export default function Contact(){
                     <FontAwesomeIcon icon={faEnvelope} className="fa-2x -ml-4 md:ml-0"/> 
                 </a> 
                 <span onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("gkulhare@cs.stonybrook.edu")}} className="hover:text-green-400 cursor-pointer translate-y-0.5">
-                    <span className="pl-2 text-xs">
                         gkulhare@cs.stonybrook.edu
-                    </span>
                 </span>
                 {(active=="mail" || active=="mailCopied") && 
                 (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
