@@ -21,18 +21,27 @@ export function Sidebar() {
                 <div className="p-4 lg:space-y-2 w-full flex lg:flex-col flex-row">
 
                     {/* Home side-bar */}
-                    <div className="flex w-full pb-2 lg:border-b border-r lg:border-r-0 border-gray-500 border-opacity-40">
-                    <a href="#" className="hover:text-indigo-400 text-green-400 px-2 lg:py-2 rounded-md justify-self-start"><FontAwesomeIcon icon={faHouseChimney} className="w-5 text-lg text-white pr-2"/>Home</a>
+                    <div className="basis-1/3 lg:basis-auto flex w-full pb-2 lg:border-b lg:border-r-0 border-gray-500 border-opacity-40">
+                    <a href="#" className="flex hover:text-indigo-400 text-green-400 px-2 lg:py-2 rounded-md justify-self-start">
+                        <FontAwesomeIcon icon={faHouseChimney} className="w-5 text-lg text-white pr-2"/>
+                        <span>Home</span>
+                    </a>
                     </div>
 
                     {/* Resume side-bar */}
-                    <div className="flex w-full pb-2 lg:border-b border-r lg:border-r-0 border-gray-500 border-opacity-40">
-                    <a href="/assets/files/Gaurav_Kulhare_Resume.pdf" download="Gaurav_Kulhare_Resume.pdf" className="hover:text-indigo-400 text-green-400 px-2 lg:py-2 rounded-md justify-self-start"> <FontAwesomeIcon icon={faFileArrowDown} className="w-5 text-lg text-white -translate-x-0.5 pr-1.5"/>Resume</a>
+                    <div className="basis-1/3 lg:basis-auto flex w-full pb-2 lg:border-b lg:border-r-0 border-gray-500 border-opacity-40">
+                    <a href="/assets/files/Gaurav_Kulhare_Resume.pdf" download="Gaurav_Kulhare_Resume.pdf" className="flex hover:text-indigo-400 text-green-400 px-2 lg:py-2 rounded-md justify-self-start"> 
+                        <FontAwesomeIcon icon={faFileArrowDown} className="w-5 text-lg text-white -translate-x-0.5 pr-1.5"/>
+                        <span>Resume</span>
+                    </a>
                     </div>
 
                     {/* Blog side-bar */}
-                    <div className="flex w-full pb-2 lg:border-b border-gray-500 border-opacity-40">
-                    <a href="#" className="hover:text-indigo-400 text-green-400 px-2 lg:py-2 rounded-md justify-self-start"><FontAwesomeIcon icon={faBlog} className="h-5 text-lg text-white pr-2"/>Blog</a>
+                    <div className="basis-1/3 lg:basis-auto flex w-full pb-2 lg:border-b border-gray-500 border-opacity-40">
+                    <a href="#" className="hover:text-indigo-400 flex text-green-400 px-2 lg:py-2 rounded-md justify-self-start">
+                        <FontAwesomeIcon icon={faBlog} className="h-5 text-lg text-white pr-2"/>
+                        <span>Blog</span>
+                    </a>
                     </div>
                 </div>
             </div>

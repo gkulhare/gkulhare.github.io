@@ -42,9 +42,9 @@ export default function Terminal(){
                 </div>
             <div className="relative w-full flex-grow items-center overflow-hidden">
                     <div className="h-full w-full bg-cover bg-center  absolute inset-0 scale-125" style={{ backgroundImage : `url(${background})`, opacity: 0.5,}}></div>
-                    <div className="w-full absolute inset-0 flex flex-col text-xs md:text-sm p-4">
-                        <p className="text-nowrap text-xs md:text-sm pr-2 text-left">admin<span className="text-indigo-400">@gkulhare</span>:</p>
-                        <div className={`text-green-400 text-xs md:text-sm text-nowrap`}>
+                    <div className="w-full absolute inset-0 flex flex-col text-sm md:text-xs p-4">
+                        <p className="text-nowrap text-sm md:text-xs pr-2 text-left">admin<span className="text-indigo-400">@gkulhare</span>:</p>
+                        <div className={`text-green-400 text-sm md:text-xs text-nowrap`}>
                             {printJob(`${jobs[index].slice(0,(typingIndex>= jobs[index].length ? jobs[index].length : typingIndex) )}${(typingIndex % 10<5 )==0 ? "|" : ""}`)}
                         </div>
                     </div>
