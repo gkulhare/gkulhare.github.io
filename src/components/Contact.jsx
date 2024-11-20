@@ -257,7 +257,7 @@ export default function Contact(){
                     <FontAwesomeIcon icon={faSquareGithub} className="fa-2x"/>
                 </a> 
                 <span onMouseEnter={()=>{setActive("github");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("https://github.com/gkulhare")}} className="text-xs pl-2 hover:text-green-400 cursor-pointer">
-                    github.com/gkulhare
+                    git/gkulhare
                 </span>
                 {(active=="github" || active=="githubCopied") && 
                 (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
@@ -272,7 +272,7 @@ export default function Contact(){
                     <FontAwesomeIcon icon={faLinkedin} className="fa-2x -ml-4 md:ml-0"/>
                 </a> 
                 <span onMouseEnter={()=>{setActive("linkedin");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("https://www.linkedin.com/in/gkulhare")}} className="text-xs pl-2 hover:text-green-400 cursor-pointer">
-                    linkedin.com/gkulhare
+                    linkedin/gkulhare
                 </span>
                 {(active=="linkedin" || active=="linkedinCopied") && 
                 (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
@@ -284,10 +284,10 @@ export default function Contact(){
                 {/* <span className="text-xs">linkedin.com/in/gkulhare</span> */}
             <div className="group relative flex items-end">
                 <a href="mailto:gkulhare@cs.stonybrook.edu" class="text-white hover:text-red-400">
-                    <FontAwesomeIcon icon={faEnvelope} className="fa-2x -ml-4 md:ml-0"/> 
+                    <FontAwesomeIcon icon={faEnvelope} className="translate-y-1 fa-2x -ml-4 md:ml-0"/> 
                 </a> 
-                <span onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("gkulhare@cs.stonybrook.edu")}} className="hover:text-green-400 cursor-pointer translate-y-0.5">
-                        gkulhare@cs.stonybrook.edu
+                <span onMouseEnter={()=>{setActive("mail");}} onMouseLeave={()=>{ setActive("none");}} onClick={()=>{copyToClipboard("gkulhare@cs.stonybrook.edu")}} className="text-xs pl-1 hover:text-green-400 cursor-pointer translate-y-0.5">
+                        mailto:gkulhare 
                 </span>
                 {(active=="mail" || active=="mailCopied") && 
                 (<span className="absolute px-2 py-1 top-0 right-1/2 translate-x-[50%] -translate-y-[50%] bg-gray-700 rounded-lg shadow-md bg-opacity-60">
