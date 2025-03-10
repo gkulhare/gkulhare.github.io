@@ -1,19 +1,18 @@
 export const jobs = [
     {   
         src: "/assets/photos/LTIMindtree_Logo.svg",
-        title: "Systems Consultant",
-        company: "Larsen & Toubro Infotech",
-        desc: ["Worked on a React-based front-end and Spring MVC and Spring Boot on the back-end for a meter data management and billing platform serving over 1 million customers across two states generating a revenue of $45,000+.",
-        "Designed a unified dashboard leveraging PL/SQL stored procedures and functions for efficient Oracle database analysis. Condensed the code base by 20% through strategic refactoring, optimized queries and introduced caching mechanisms to reduce load times by 35%."," Automated CI/CD pipelines with Jenkins for testing across head-end systems, meter analytics, and logistics. Reduced manual effort by 50%."],
+        title: "Software Engineer",
+        company: "LTIMindtree",
+        desc: ["Built a smart-meter data management platform using React, Redux, Typescript on front-end and Spring Boot using Java on the back-end, handles upward of 100k MAU sporting a load time less than 2s, generating $45,000+ in revenue.",
+        "Optimized performance with caching and refactoring in PostgreSQL,reducing load times by 35% and code size by 20% using procedures in PL/SQL.","Automated CI/CD pipelines with Jenkins, secured REST API endpoints using OAuth 2.0 and JWT, improving efficiency by 50%."],
         display:"scale-75",
     },
     {   
         src:"/assets/photos/clairvoyant_logo_bw-300x122.png",
         title: "Machine Learning Research Assistant",
         company: "Clairvoyant Bizinfo",
-        desc: ["Deployed and optimized ETL pipelines on AWS EC2 using Apache Airflow, processing data from web sources via web scraping and APIs. Increased data ingestion efficiency by 25%, reducing the processing time by 15 hours per week.",
-            "Achieved 74.49% accuracy in sarcasm detection by implementing and fine-tuning text analysis models on 50,000+ text samples, resulting in a 20% improvement in detection performance over previous benchmarks.",
-            "Contributed to the development of word-embedding generation and training strategies for supervised and semi-supervised learning models, leading to a 15% boost in model performance on a dataset of 500,000+ words."],
+        desc: ["Deployed and optimized ETL pipelines on AWS EC2 using Apache Airflow, processing data from web sources via web scraping and APIs using Python. Increased data ingestion efficiency by 25%, reducing the processing time by 15 hours per week.",
+            "Built sentiment analysis models using NLP techniques to analyze online extracted data, leveraging transformer-based architectures for improved accuracy, and scalable inference pipelines for real-time text classification."],
         display:"scale-[60%] -translate-y-4",
     },
     {
@@ -21,10 +20,8 @@ export const jobs = [
         title: "Research Project Assistant",
         company: "The Research Foundation for SUNY",
         desc: [
-            "Implemented a Rust crate for simulating local network environments with multi-threaded asynchronous tasks and inter-node communication via configurable channels, reducing testing time in remote environments by 50%.",
-            "Developed a Rust library for Secret Sharing, featuring Galois Field matrix inversion for polynomial interpolation and share refreshing algorithms. Improved cryptographic security in blockchain networks with zero-knowledge commitments and reduced vulnerability risks by 95%.",
-            "• Published a paper on information-theoretic secure encryption methods and blockchain-based key management solutions to address cryptographic vulnerabilities in distributed networks.",
-            "Built a scalable secret-sharing application utilizing GRPCs, Docker and Kubernetes, achieving high availability, providing complete abstraction and reducing recovery latency by 60%."],
+            "Implemented a Rust crate for Secret Sharing, along with configurable Python Scripts for deployment. Improved cryptographic security in Node servers with zero-knowledge commitments and reduced vulnerability risks by 95%.",
+            "Constructed a scalable secret-sharing application utilizing GRPCs, Docker and Kubernetes, achieving high availability, providing complete abstraction and reducing recovery latency by 60%."],
         display:"scale-50 -translate-y-2",
     }
 ];
